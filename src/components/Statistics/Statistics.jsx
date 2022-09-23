@@ -16,7 +16,7 @@ function StatisticsItem({ label, percentage, index }) {
   return (
     <Item color={index}>
       <Label>{label}</Label>
-      <Percent>{percentage}</Percent>
+      <Percent>{percentage}%</Percent>
     </Item>
   );
 }
