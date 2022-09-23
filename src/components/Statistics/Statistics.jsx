@@ -1,25 +1,44 @@
 // Check types of props
 import PropTypes from 'prop-types';
 
+import {
+  StatisticsSection,
+  StatisticsList,
+  ListWrapper,
+  Item,
+  Label,
+  Percent,
+  Title,
+} from './Statistics.styled';
+
 // Statistics list
-function StatisticsList({ label, percentage }) {
+function StatisticsItem({ label, percentage, index }) {  
   return (
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
+    <Item color={index}>
+      <Label>{label}</Label>
+      <Percent>{percentage}</Percent>
+    </Item>
   );
 }
 
 // Statistics
 export function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
-      {stats.map(({ id, label, percentage }) => (
-        <StatisticsList key={id} label={label} percentage={percentage} />
-      ))}
-    </section>
+    <StatisticsSection>
+      <StatisticsList>
+        {title && <Title>{title}</Title>}
+        <ListWrapper>
+          {stats.map(({ id, label, percentage }, i) =>             
+            <StatisticsItem
+              key={id}
+              label={label}
+              percentage={percentage}
+              index={i}
+            />
+          )}
+        </ListWrapper>
+      </StatisticsList>
+    </StatisticsSection>
   );
 }
 
