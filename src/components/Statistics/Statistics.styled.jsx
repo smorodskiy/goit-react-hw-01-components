@@ -11,6 +11,7 @@ export const StatisticsList = styled.ul``;
 export const ListWrapper = styled.div`
   display: flex;
   min-height: 80px;
+  color: #fff;
 `;
 
 export const Item = styled.li`
@@ -36,9 +37,13 @@ export const Item = styled.li`
   }};
 `;
 
-export const Label = styled.span``;
+export const Label = styled.span`
+  margin-bottom: 5px;
+`;
 
-export const Percent = styled.span``;
+export const Percent = styled.span`
+  font-size: 25px;
+`;
 
 export const Title = styled.h2`
   padding: 30px;
