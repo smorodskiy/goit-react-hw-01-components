@@ -1,19 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-export const theme = {
-  statistics: {
-    titleBgColor: "#fff",
-    titleTextColor: "#5a5a5a",
-    listColors : {
-      0: "#4ec4f8",
-      1: "#a43cf3",
-      2: "#e64c66",
-      3: "#20b8c5",
-    }
-  }
-}
-
 const GlobalStyle = createGlobalStyle`    
 
     ${normalize}
