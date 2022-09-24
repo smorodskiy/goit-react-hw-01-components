@@ -1,19 +1,23 @@
 // For stylish components
 import styled from 'styled-components';
 
+// Section
 export const StatisticsSection = styled.section`
   width: 320px;
   box-shadow: 0 0 88px 0 rgb(0 0 0 / 16%);
 `;
 
-export const StatisticsList = styled.ul``;
-
+// List wrapper
 export const ListWrapper = styled.div`
   display: flex;
   min-height: 80px;
-  color: #fff;
+  color: ${(p) => p.theme.statistics.listTextColor};
 `;
 
+// List
+export const StatisticsList = styled.ul``;
+
+// Item
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
@@ -37,14 +41,7 @@ export const Item = styled.li`
   }};
 `;
 
-export const Label = styled.span`
-  margin-bottom: 5px;
-`;
-
-export const Percent = styled.span`
-  font-size: 25px;
-`;
-
+// Title
 export const Title = styled.h2`
   padding: 30px;
   text-align: center;
@@ -52,4 +49,15 @@ export const Title = styled.h2`
   text-transform: uppercase;
   font-weight: 600;
   color: ${p => p.theme.statistics.titleTextColor};
+`;
+
+
+// Label
+export const Label = styled.span`
+  margin-bottom: 5px;
+`;
+
+// Percent
+export const Percent = styled.span`
+  font-size: 25px;
 `;
