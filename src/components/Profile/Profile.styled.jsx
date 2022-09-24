@@ -7,12 +7,13 @@ export const Card = styled.div`
   width: 320px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.1607843137254902);
+  box-shadow: ${p => p.theme.profile.cardShadow};
 `;
 
 // Username
 export const Username = styled.p`
-  font-weight: 700;  
+  font-size: ${p => p.theme.profile.fontSize};
+  font-weight: ${p => p.theme.profile.fontWeight};
 `;
 
 // Tag
@@ -28,8 +29,8 @@ export const DescriptionDiv = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #fff;
-  font-size: 18px;
+  background: ${p => p.theme.profile.descriptionBgColor};
+  font-size: ${p => p.theme.profile.descriptionFontSize};
   /* HARDCORE!!!! */
   & p:not(:last-child) {
     margin-bottom: 10px;
@@ -50,9 +51,9 @@ export const Image = styled.img`
 export const StatisticsList = styled.ul`
   display: flex;
   align-items: center;
-  background-color: #f3f6f9;
+  background-color: ${p => p.theme.profile.statsBgColor};
   height: 100px;
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid ${p => p.theme.profile.borderColor};
   box-sizing: border-box;
 `;
 
@@ -65,16 +66,13 @@ export const StatisticsItem = styled.li`
   height: 100%;
   justify-content: center;
 
-  &:not(:last-child) {    
-    border-right: 1px solid #dbdbdb;
+  &:not(:last-child) {
+    border-right: 1px solid${p => p.theme.profile.borderColor};
   }
 
   & > span:last-child {
     margin-top: 5px;
     font-weight: 700;
   }
-  /* ::before {
-    content: '';
-    border: 1px solid red;
-  } */
+
 `;
