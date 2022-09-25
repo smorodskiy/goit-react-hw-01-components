@@ -4,18 +4,19 @@ import styled from 'styled-components';
 // Section
 export const StatisticsSection = styled.section`
   width: 320px;
-  box-shadow: 0 0 88px 0 rgb(0 0 0 / 16%);
 `;
 
 // List wrapper
 export const ListWrapper = styled.div`
   display: flex;
   min-height: 80px;
-  color: ${(p) => p.theme.statistics.listTextColor};
+  color: ${p => p.theme.statistics.listTextColor};
 `;
 
 // List
-export const StatisticsList = styled.ul``;
+export const StatisticsList = styled.ul`
+  box-shadow: 0 0 88px 0 rgb(0 0 0 / 16%);
+`;
 
 // Item
 export const Item = styled.li`
@@ -50,7 +51,6 @@ export const Title = styled.h2`
   font-weight: 600;
   color: ${p => p.theme.statistics.titleTextColor};
 `;
-
 
 // Label
 export const Label = styled.span`
