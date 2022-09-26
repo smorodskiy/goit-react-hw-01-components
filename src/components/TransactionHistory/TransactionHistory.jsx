@@ -10,7 +10,7 @@ import {
   BodyType,
 } from './TransactionHistory.styled';
 
-import { cellIn, cellOut } from './HoverEffect';
+import { colorize } from './HoverEffect';
 
 function Transaction(data) {
   const { type, amount, currency } = data;
@@ -32,10 +32,12 @@ function Transaction(data) {
 export default function TransactionHistory({ items: history }) {
   return (
     <TransactionSection>
-      <Table onMouseOver={cellIn} onMouseOut={cellOut}>
+      <Table onMouseOver={colorize} onMouseOut={colorize}>
         <thead>
           <tr>
-            <TableHead as={HeadType} className="column1">Type</TableHead>
+            <TableHead as={HeadType} className="column1">
+              Type
+            </TableHead>
             <TableHead className="column2">Amount</TableHead>
             <TableHead className="column3">Currency</TableHead>
           </tr>
