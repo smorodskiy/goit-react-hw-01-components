@@ -10,16 +10,16 @@ import data from 'data/data.json';
 // Users data
 import friends from 'data/friends.json';
 // Transactions data
-import transactions from "data/transactions.json";
+import transactions from 'data/transactions.json';
 
-import { MainContainer, LeftContainer } from './App.styled';
+import { ProfileContainer, Container } from './App.styled';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
 
   return (
-    <MainContainer>
-      <LeftContainer>
+    <Container>
+      <ProfileContainer>
         <Profile
           username={username}
           tag={tag}
@@ -28,10 +28,10 @@ export const App = () => {
           stats={stats}
         />
 
+        <FriendList friends={friends} />
         <Statistics title="Upload stats" stats={data} />
-      </LeftContainer>
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
-    </MainContainer>
+        <TransactionHistory items={transactions} />
+      </ProfileContainer>
+    </Container>
   );
 };
