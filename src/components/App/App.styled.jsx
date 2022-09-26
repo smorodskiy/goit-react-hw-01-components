@@ -11,6 +11,15 @@ export const ProfileContainer = styled.div`
     "stats ."
     "transaction transaction";
   gap: 15px;
+
+  @media(max-width: 660px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "profile"
+    "stats"
+    "friends"
+    "transaction";
+  }
 `;
 
 export const Container = styled.div`
