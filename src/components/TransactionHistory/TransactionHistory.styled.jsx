@@ -8,16 +8,21 @@ export const TransactionSection = styled.section`
 
 // Table
 export const Table = styled.table`
-  width: 100%;
-  /* overflow: scroll; */
-  /* height: 200px; */
+  overflow: auto;
   border-collapse: collapse;
-  overflow: hidden;
+  display: block;
+  max-height: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+
+  /* Hardcore !!! */
+  & tbody td,
+  & thead th {
+    width: 1%;
+  }
 `;
 
-// Head
+// Head of table
 export const TableHead = styled.th`
   padding: 24px 10px 20px 25px;
   text-align: left;
@@ -36,18 +41,20 @@ export const TableHead = styled.th`
   }
 `;
 
-// Column data
-export const ColumnData = styled.td`
+// Table data
+export const TableData = styled.td`
   padding: 18px 10px 14px 25px;
   font-size: 14px;
   color: gray;
   line-height: 1.4;
 
+  /* On hover */
   &:hover {
     background-color: #e03e9c !important;
     color: #fff;
   }
 
+  /* Fill with color another cell in the column */
   &.hover-column {
     background-color: #fcebf5;
   }
@@ -56,8 +63,11 @@ export const ColumnData = styled.td`
 // Style for type column(head)
 export const HeadType = styled(TableHead)`
   padding-left: 64px;
-`;
 
+  @media (max-width: 660px) {
+    padding-left: 35px;
+  }
+`;
 
 // Body row
 export const BodyRow = styled.tr`
@@ -69,6 +79,10 @@ export const BodyRow = styled.tr`
 `;
 
 // Style for type column(body)
-export const BodyType = styled(ColumnData)`
+export const BodyType = styled(TableData)`
   padding-left: 64px;
+
+  @media (max-width: 660px) {
+    padding-left: 35px;
+  }
 `;
