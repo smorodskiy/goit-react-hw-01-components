@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   TransactionSection,
   Table,
-  ColumnData,
+  TableData,
   TableHead,
   BodyRow,
   HeadType,
@@ -16,15 +16,15 @@ function Transaction(data) {
   const { type, amount, currency } = data;
   return (
     <BodyRow>
-      <ColumnData as={BodyType} className="column1" data-column="1">
+      <TableData as={BodyType} className="column1" data-column="1">
         {type}
-      </ColumnData>
-      <ColumnData className="column2" data-column="2">
+      </TableData>
+      <TableData className="column2" data-column="2">
         {amount}
-      </ColumnData>
-      <ColumnData className="column3" data-column="3">
+      </TableData>
+      <TableData className="column3" data-column="3">
         {currency}
-      </ColumnData>
+      </TableData>
     </BodyRow>
   );
 }
