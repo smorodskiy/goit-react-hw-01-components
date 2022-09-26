@@ -2,18 +2,21 @@
 import styled from 'styled-components';
 
 // CSS in JS
-export const MainContainer = styled.div`
-  display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  justify-content: center;
+export const ProfileContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;  
+  grid-template-areas: 
+    "profile friends"
+    "stats ."
+    "transaction transaction";
   gap: 15px;
-  margin: 20px;
 `;
 
-export const LeftContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
   gap: 15px;
 `;
