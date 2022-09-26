@@ -4,6 +4,7 @@ import styled from 'styled-components';
 // Section
 export const StatisticsSection = styled.section`
   width: 320px;
+  grid-area: stats;
 `;
 
 // List wrapper

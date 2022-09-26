@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // Card
 export const Card = styled.div`
+  grid-area: profile;
   position: relative;
   width: 320px;
   border-radius: 10px;

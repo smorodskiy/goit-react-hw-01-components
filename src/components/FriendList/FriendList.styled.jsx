@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // Friends list
 export const List = styled.ul`
+  grid-area: friends;
   display: flex;
   flex-direction: column;
   width: 320px;
